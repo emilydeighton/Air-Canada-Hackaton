@@ -1,0 +1,68 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+
+.flex {
+  @include flex(row);
+  &--left {
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+.border-header {
+  padding-left: 5rem;
+  border-left: 0.12rem solid #4a4f55;
+}
+
+.header {
+  background-color: $ac-black;
+  height: 8rem;
+  @include flex(row);
+  align-items: center;
+  padding: 0 3rem;
+  color: #fff;
+  justify-content: space-between;
+
+  &__title {
+  }
+
+  &__container {
+    @include flex(row);
+    gap: 5rem;
+    align-items: center;
+  }
+
+  &__right {
+    padding-right: 0.6rem;
+  }
+
+  &__image {
+    filter: invert(100%);
+    display: block;
+    width: 2.4rem;
+
+    &--1 {
+      width: 2rem;
+      height: 2rem;
+      filter: invert(100%);
+      display: block;
+    }
+    &--menu {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+    }
+  }
+
+  &__span1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+  &__span2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+
+.progress {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}

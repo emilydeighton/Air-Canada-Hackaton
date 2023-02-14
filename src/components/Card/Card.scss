@@ -1,0 +1,127 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/variables" as *;
+
+.cards {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+  padding-top: 4rem;
+}
+
+.card {
+  width: 45rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  &__container {
+    box-shadow: 0 0 1.5rem 0 rgb(0, 0, 0, 30%);
+    border-radius: 2rem;
+    width: min-content;
+    height: 43rem;
+
+    &-bottom {
+      padding: 2rem;
+      position: relative;
+    }
+  }
+
+  &__img {
+    width: 38rem;
+    height: 19rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    &-container {
+      position: relative;
+    }
+
+    &-mask {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 25%;
+      opacity: 1;
+      background: linear-gradient(
+        180deg,
+        #ffffff00 0,
+        hsla(0, 0%, 100%, 0.563) 53%,
+        #fff
+      );
+    }
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+
+  &__hr {
+    &--short {
+      width: 2rem;
+      height: 0.1rem;
+      border: 0.1rem solid #d0d0ce;
+      background: #d0d0ce;
+      margin-bottom: 1.5rem;
+    }
+
+    &--long {
+      width: 34rem;
+      border: 0.1rem solid #eaeae8;
+      background: #eaeae8;
+      margin: 3rem auto;
+    }
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+
+  &__link {
+    color: #005078;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.like {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  width: 27%;
+  text-align: right;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #d0d0ce;
+  background-color: rgba(249, 249, 249, 0.5);
+  border-radius: 0.75rem;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  bottom: 1rem;
+  right: 7.5rem;
+  padding: 0.5rem 1rem;
+  color: black;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
